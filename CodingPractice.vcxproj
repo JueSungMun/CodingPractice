@@ -132,6 +132,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Algorithm\IAlgorithm.h" />
+    <ClInclude Include="Algorithm\Test.h" />
+    <ClInclude Include="Algorithm\Test_Atan2.h" />
     <ClInclude Include="UE4-Math\GenericPlatform\GenericPlatformMath.h" />
     <ClInclude Include="UE4-Math\Math\Axis.h" />
     <ClInclude Include="UE4-Math\Math\Box.h" />

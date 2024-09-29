@@ -34,6 +34,9 @@
     <Filter Include="UE4_Math\Windows">
       <UniqueIdentifier>{5115f625-07bf-4e98-8d19-b634d2fd85be}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Algorithm">
+      <UniqueIdentifier>{910ccb54-0ca4-43d2-bc0b-b933d0ddf0b4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="UE4-Math\GenericPlatform\GenericPlatformMath.h">
@@ -140,6 +143,15 @@
     </ClInclude>
     <ClInclude Include="UE4-Math\ServerUtils\CMathUtil.h">
       <Filter>UE4_Math\ServerUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm\IAlgorithm.h">
+      <Filter>Algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm\Test.h">
+      <Filter>Algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm\Test_Atan2.h">
+      <Filter>Algorithm</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

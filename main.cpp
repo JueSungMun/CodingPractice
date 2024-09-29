@@ -3,12 +3,17 @@
 //
 
 #include "Math/Quat.h"
+#include "Algorithm/Test_Atan2.h"
 #include <iostream>
 
-int main() {
+int main() 
+{
   auto q1 = UE4Math::FQuat(0.3, 0.3, 0.3, 0.3);
   auto q2 = UE4Math::FQuat(0.4, 0.4, 0.4, 0.4);
-  std::cout << "Hello World!\n" << q1.ToString() << q2.ToString();
+  std::cout << "Hello World!\n" << q1.ToString() << q2.ToString() << std::endl;
+
+  auto _alrorithm = std::make_shared<Test_Atan2>();
+  _alrorithm->DoTest();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
