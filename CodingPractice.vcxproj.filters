@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="UE4_Math">
+      <UniqueIdentifier>{7f868cb3-d111-4e0d-aa8a-0b423b562dd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UE4_Math\GenericPlatform">
+      <UniqueIdentifier>{01b7dc23-38aa-4396-aa1a-84f375929753}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UE4_Math\Math">
+      <UniqueIdentifier>{d50d1a47-5d1b-4b19-b74b-5022112c4f1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UE4_Math\Memory">
+      <UniqueIdentifier>{714720c6-ac69-4fb2-b89f-5c5956ce24c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UE4_Math\Misc">
+      <UniqueIdentifier>{c345a274-00c7-4b52-bf35-10e9eb466763}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UE4_Math\ServerUtils">
+      <UniqueIdentifier>{5ba0b8fb-75bd-4843-bed5-d4178160419b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UE4_Math\Windows">
+      <UniqueIdentifier>{5115f625-07bf-4e98-8d19-b634d2fd85be}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="UE4-Math\GenericPlatform\GenericPlatformMath.h">
+      <Filter>UE4_Math\GenericPlatform</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\Math\Axis.h">
+      <Filter>UE4_Math\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\Math\Box.h">
+      <Filter>UE4_Math\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\Math\Color.h">
+      <Filter>UE4_Math\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\Math\Float16.h">
+      <Filter>UE4_Math\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\Math\Float32.h">
+      <Filter>UE4_Math\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\Math\InterpCurvePoint.h">
+      <Filter>UE4_Math\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\Math\IntPoint.h">
+      <Filter>UE4_Math\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\Math\IntRect.h">
+      <Filter>UE4_Math\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\Math\IntVector.h">
+      <Filter>UE4_Math\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\Math\Matrix.h">
+      <Filter>UE4_Math\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\Math\NumericLimits.h">
+      <Filter>UE4_Math\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\Math\Plane.h">
+      <Filter>UE4_Math\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\Math\Quat.h">
+      <Filter>UE4_Math\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\Math\QuatRotationTranslationMatrix.h">
+      <Filter>UE4_Math\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\Math\RotationAboutPointMatrix.h">
+      <Filter>UE4_Math\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\Math\RotationMatrix.h">
+      <Filter>UE4_Math\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\Math\RotationTranslationMatrix.h">
+      <Filter>UE4_Math\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\Math\Rotator.h">
+      <Filter>UE4_Math\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\Math\TwoVectors.h">
+      <Filter>UE4_Math\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\Math\UnrealMath.h">
+      <Filter>UE4_Math\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\Math\UnrealMathFPU.h">
+      <Filter>UE4_Math\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\Math\UnrealMathUtility.h">
+      <Filter>UE4_Math\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\Math\UnrealMathVectorCommon.h">
+      <Filter>UE4_Math\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\Math\UnrealMathVectorConstants.h">
+      <Filter>UE4_Math\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\Math\Vector.h">
+      <Filter>UE4_Math\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\Math\Vector2D.h">
+      <Filter>UE4_Math\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\Math\Vector2DHalf.h">
+      <Filter>UE4_Math\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\Math\Vector4.h">
+      <Filter>UE4_Math\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\Math\VectorRegister.h">
+      <Filter>UE4_Math\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\Memory\FMemory.h">
+      <Filter>UE4_Math\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\Misc\CoreMiscDefines.h">
+      <Filter>UE4_Math\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\Misc\IsPODType.h">
+      <Filter>UE4_Math\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\Windows\WindowsPlatformMath.h">
+      <Filter>UE4_Math\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="UE4-Math\ServerUtils\CMathUtil.h">
+      <Filter>UE4_Math\ServerUtils</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="UE4-Math\Math\UnrealMath.cpp">
+      <Filter>UE4_Math\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="UE4-Math\Memory\FMemory.cpp">
+      <Filter>UE4_Math\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
