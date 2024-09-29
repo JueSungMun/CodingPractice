@@ -1641,6 +1641,8 @@ namespace UE4Math
 		case EAxis::Z:
 			Z = Component;
 			break;
+		default:
+			break;
 		}
 	}
 

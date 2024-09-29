@@ -672,6 +672,8 @@ namespace UE4Math
 		case EAxis::Z:
 			Yaw = Component;
 			break;
+		default:
+			break;
 		}
 	}
 

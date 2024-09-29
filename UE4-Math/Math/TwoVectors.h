@@ -419,7 +419,7 @@ namespace UE4Math
 
 	inline std::string FTwoVectors::ToString() const
 	{
-		return "V1=(" + v1.ToString(), ") V2=(" + v2.ToString() + ")";
+		return "V1=(" + v1.ToString() + ") V2=(" + v2.ToString() + ")";
 		//return FString::Printf(TEXT("V1=(%s) V2=(%s)"), *v1.ToString(), *v2.ToString());
 	}
 

@@ -403,6 +403,8 @@ namespace UE4Math
 	std::string FMatrix::ToString() const
 	{
 		std::string Output;
+		
+#if defined(_MSC_VER)
 		char stemp[50] = "";snprintf(stemp, 50, "[%g %g %g %g]", M[0][0], M[0][1], M[0][2], M[0][3]);
 		Output += std::string(stemp);
 		char stemp2[50] = ""; snprintf(stemp2, 50, "[%g %g %g %g]", M[1][0], M[1][1], M[1][2], M[1][3]);
@@ -411,7 +413,7 @@ namespace UE4Math
 		Output += std::string(stemp);
 		char stemp4[50] = ""; snprintf(stemp4, 50, "[%g %g %g %g]", M[3][0], M[3][1], M[3][2], M[3][3]);
 		Output += std::string(stemp);
-
+#endif
 		return Output;
 	}
 
@@ -2560,14 +2562,14 @@ namespace UE4Math
 		for (int32 ItCount = 0; ItCount < NumIterations; ItCount++)
 		{
 			// Classify each point - find closest cluster center
-			for (int32 i = 0; i < Points.size(); i++)
+			for (int32 i = 0; i < static_cast<int32>(Points.size()) ; i++)
 			{
 				const FVector& Pos = Points[i];
 
 				// Iterate over all clusters to find closes one
 				int32 NearestClusterIndex = INDEX_NONE;
 				float NearestClusterDistSqr = BIG_NUMBER;
-				for (int32 j = 0; j < Clusters.size(); j++)
+				for (int32 j = 0; j < static_cast<int32>(Clusters.size()); j++)
 				{
 					const float DistSqr = (Pos - Clusters[j]).SizeSquared();
 					if (DistSqr < NearestClusterDistSqr)
@@ -2585,7 +2587,7 @@ namespace UE4Math
 			}
 
 			// All points classified - update cluster center as average of membership
-			for (int32 i = 0; i < Clusters.size(); i++)
+			for (int32 i = 0; i < static_cast<int32>(Clusters.size()) ; i++)
 			{
 				if (ClusterData[i].ClusterSize > 0)
 				{

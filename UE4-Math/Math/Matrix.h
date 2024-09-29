@@ -994,7 +994,7 @@ namespace UE4Math
 			return FVector(M[2][0], M[2][1], M[2][2]);
 
 		default:
-			ensure(0);
+			//ensure(0);
 			return FVector::ZeroVector;
 		}
 	}

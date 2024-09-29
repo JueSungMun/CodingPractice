@@ -9,7 +9,11 @@ namespace UE4Math
 
 	inline bool VectorIsAligned(const void* Ptr)
 	{
+#if defined(_MSC_VER)
 		return !(int32(Ptr) & (SIMD_ALIGNMENT - 1));
+#else
+		return !((*(int*)Ptr) & (SIMD_ALIGNMENT - 1));
+#endif
 	}
 
 	// Returns a normalized 4 vector = Vector / |Vector|.
@@ -255,7 +259,9 @@ namespace UE4Math
 	 * @return the number of zeros before the first "on" bit
 	 */
 
+#if defined(_MSC_VER)
 #pragma intrinsic( _BitScanForward )
+#endif
 	inline uint32 appCountTrailingZeros(uint32 Value)
 	{
 		if (Value == 0)
@@ -263,7 +269,12 @@ namespace UE4Math
 			return 32;
 		}
 		unsigned long BitIndex;	// 0-based, where the LSB is 0 and MSB is 31
+
+#if defined (_MSC_VER)
 		_BitScanForward(&BitIndex, Value);	// Scans from LSB to MSB
+#else
+		BitIndex = __builtin_ctz(Value);
+#endif
 		return BitIndex;
 	}
 }

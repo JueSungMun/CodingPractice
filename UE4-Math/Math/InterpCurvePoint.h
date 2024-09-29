@@ -222,7 +222,7 @@ namespace UE4Math
 			float* CurPointVal = (float*)&CurPoint;
 			float* NextPointVal = (float*)&NextPoint;
 			float* OutTangentVal = (float*)&OutTangent;
-			for (int32 CurValPos = 0; CurValPos < sizeof(T); CurValPos += sizeof(float))
+			for (int32 CurValPos = 0; CurValPos < static_cast<int32>(sizeof(T)) ; CurValPos += sizeof(float))
 			{
 				// Clamp it!
 				const float ClampedTangent =
