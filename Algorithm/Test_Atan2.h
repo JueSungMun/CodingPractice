@@ -1,5 +1,6 @@
 #pragma once
 #include "IAlgorithm.h"
+#include "Math/UnrealMathUtility.h"
 
 class Test_Atan2 : public IAlgorithm
 {

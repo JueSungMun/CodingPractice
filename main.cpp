@@ -2,12 +2,12 @@
 // begins and ends there.
 //
 
-#include "Math/Quat.h"
 #include "Algorithm/Test_Atan2.h"
+#include "Math/Quat.h"
 #include <iostream>
+#include <memory>
 
-int main() 
-{
+int main() {
   auto q1 = UE4Math::FQuat(0.3, 0.3, 0.3, 0.3);
   auto q2 = UE4Math::FQuat(0.4, 0.4, 0.4, 0.4);
   std::cout << "Hello World!\n" << q1.ToString() << q2.ToString() << std::endl;
