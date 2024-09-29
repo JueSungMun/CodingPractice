@@ -16,7 +16,11 @@ public:
 		char str[100];
 		va_list vargs;
 		va_start(vargs, _format_str);
+#if defined(_MSC_VER)
+		vsprintf_s(str, _format_str, vargs);
+#else
 		vsprintf(str, _format_str, vargs);
+#endif
 		va_end(vargs);
 		return str;
 	}
