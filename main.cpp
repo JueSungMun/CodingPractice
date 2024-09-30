@@ -3,16 +3,13 @@
 //
 
 #include "Algorithm/Test_Atan2.h"
+#include "Algorithm/CodingInterview/ArrayAndString.h"
 #include "Math/Quat.h"
 #include <iostream>
 #include <memory>
 
 int main() {
-  auto q1 = UE4Math::FQuat(0.3, 0.3, 0.3, 0.3);
-  auto q2 = UE4Math::FQuat(0.4, 0.4, 0.4, 0.4);
-  std::cout << "Hello World!\n" << q1.ToString() << q2.ToString() << std::endl;
-
-  auto _alrorithm = std::make_shared<Test_Atan2>();
+  auto _alrorithm = std::make_shared<ArrayAndString>();
   _alrorithm->DoTest();
 }
 
