@@ -11,8 +11,4 @@ public:
 
 protected:
   virtual const char* GetClassName()  override { return "ArrayAndString"; }
-
-private:
-  void _1_1_FindUniqueString();
-  void _1_2_ReverseString();
 };
