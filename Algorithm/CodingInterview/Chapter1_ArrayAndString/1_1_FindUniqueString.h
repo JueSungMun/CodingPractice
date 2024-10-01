@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "../ICodingInterview.h"
 
 class FindUniqueString : public ICodingInterview

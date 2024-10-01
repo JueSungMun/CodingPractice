@@ -132,6 +132,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Algorithm\CodingInterview\ArrayAndString.h" />
+    <ClInclude Include="Algorithm\CodingInterview\Chapter1_ArrayAndString\1_1_FindUniqueString.h" />
+    <ClInclude Include="Algorithm\CodingInterview\Chapter1_ArrayAndString\1_2_ReverseString.h" />
+    <ClInclude Include="Algorithm\CodingInterview\ICodingInterview.h" />
     <ClInclude Include="Algorithm\IAlgorithm.h" />
     <ClInclude Include="Algorithm\Test.h" />
     <ClInclude Include="Algorithm\Test_Atan2.h" />
@@ -172,9 +176,13 @@
     <ClInclude Include="UE4-Math\Windows\WindowsPlatformMath.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Algorithm\CodingInterview\ArrayAndString.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="UE4-Math\Math\UnrealMath.cpp" />
     <ClCompile Include="UE4-Math\Memory\FMemory.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".editorconfig" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

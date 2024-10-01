@@ -37,6 +37,12 @@
     <Filter Include="Algorithm">
       <UniqueIdentifier>{910ccb54-0ca4-43d2-bc0b-b933d0ddf0b4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Algorithm\CodingInterview">
+      <UniqueIdentifier>{eff602b6-015a-47ed-9ded-c3b36303dc73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algorithm\CodingInterview\Chapter1_ArrayAndString">
+      <UniqueIdentifier>{dbbfe542-622b-4253-bf29-685145124c97}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="UE4-Math\GenericPlatform\GenericPlatformMath.h">
@@ -153,6 +159,18 @@
     <ClInclude Include="Algorithm\Test_Atan2.h">
       <Filter>Algorithm</Filter>
     </ClInclude>
+    <ClInclude Include="Algorithm\CodingInterview\ArrayAndString.h">
+      <Filter>Algorithm\CodingInterview</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm\CodingInterview\ICodingInterview.h">
+      <Filter>Algorithm\CodingInterview</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm\CodingInterview\Chapter1_ArrayAndString\1_1_FindUniqueString.h">
+      <Filter>Algorithm\CodingInterview\Chapter1_ArrayAndString</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm\CodingInterview\Chapter1_ArrayAndString\1_2_ReverseString.h">
+      <Filter>Algorithm\CodingInterview\Chapter1_ArrayAndString</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="UE4-Math\Math\UnrealMath.cpp">
@@ -164,5 +182,11 @@
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Algorithm\CodingInterview\ArrayAndString.cpp">
+      <Filter>Algorithm\CodingInterview</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".editorconfig" />
   </ItemGroup>
 </Project>
