@@ -10,7 +10,8 @@ public:
   virtual std::string Problem() override
   {
     std::string _desc;
-    _desc += "문자열에 포함된 문자들이 전부 유일한지를 검사하는 알고리즘을 구현하라. \r\n";
+    _desc += "문자열에 포함된 문자들이 전부 유일한지를 검사하는 알고리즘을 구현하라.";
+    _desc += NewLine;
     _desc += "다른 자료구조를 사용할 수 없는 상황이라면 어떻게 하겠는가?";
     return _desc;
   }

@@ -171,6 +171,24 @@
     <ClInclude Include="Algorithm\CodingInterview\Chapter1_ArrayAndString\1_2_ReverseString.h">
       <Filter>Algorithm\CodingInterview\Chapter1_ArrayAndString</Filter>
     </ClInclude>
+    <ClInclude Include="Algorithm\CodingInterview\Chapter1_ArrayAndString\1_3_FindPermutationString.h">
+      <Filter>Algorithm\CodingInterview\Chapter1_ArrayAndString</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm\CodingInterview\Chapter1_ArrayAndString\1_4_ChangeBlankCharacter.h">
+      <Filter>Algorithm\CodingInterview\Chapter1_ArrayAndString</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm\CodingInterview\Chapter1_ArrayAndString\1_5_CompressString.h">
+      <Filter>Algorithm\CodingInterview\Chapter1_ArrayAndString</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm\CodingInterview\Chapter1_ArrayAndString\1_6_RotationImage.h">
+      <Filter>Algorithm\CodingInterview\Chapter1_ArrayAndString</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm\CodingInterview\Chapter1_ArrayAndString\1_7_MakeZeroRowAndCol.h">
+      <Filter>Algorithm\CodingInterview\Chapter1_ArrayAndString</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm\CodingInterview\Chapter1_ArrayAndString\1_8_CheckRotatedString.h">
+      <Filter>Algorithm\CodingInterview\Chapter1_ArrayAndString</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="UE4-Math\Math\UnrealMath.cpp">

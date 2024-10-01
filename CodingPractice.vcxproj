@@ -135,6 +135,12 @@
     <ClInclude Include="Algorithm\CodingInterview\ArrayAndString.h" />
     <ClInclude Include="Algorithm\CodingInterview\Chapter1_ArrayAndString\1_1_FindUniqueString.h" />
     <ClInclude Include="Algorithm\CodingInterview\Chapter1_ArrayAndString\1_2_ReverseString.h" />
+    <ClInclude Include="Algorithm\CodingInterview\Chapter1_ArrayAndString\1_3_FindPermutationString.h" />
+    <ClInclude Include="Algorithm\CodingInterview\Chapter1_ArrayAndString\1_4_ChangeBlankCharacter.h" />
+    <ClInclude Include="Algorithm\CodingInterview\Chapter1_ArrayAndString\1_5_CompressString.h" />
+    <ClInclude Include="Algorithm\CodingInterview\Chapter1_ArrayAndString\1_6_RotationImage.h" />
+    <ClInclude Include="Algorithm\CodingInterview\Chapter1_ArrayAndString\1_7_MakeZeroRowAndCol.h" />
+    <ClInclude Include="Algorithm\CodingInterview\Chapter1_ArrayAndString\1_8_CheckRotatedString.h" />
     <ClInclude Include="Algorithm\CodingInterview\ICodingInterview.h" />
     <ClInclude Include="Algorithm\IAlgorithm.h" />
     <ClInclude Include="Algorithm\Test.h" />

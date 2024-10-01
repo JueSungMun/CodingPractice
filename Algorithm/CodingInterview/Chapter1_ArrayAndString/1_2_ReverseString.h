@@ -11,7 +11,7 @@ public:
   virtual std::string Problem() override
   {
     std::string _desc;
-    _desc += "널 문자로 끝나는 문자열을 뒤집는 reverse(char* str) 함수를 C나 C++로 구현하라. \r\n";
+    _desc += "널 문자로 끝나는 문자열을 뒤집는 reverse(char* str) 함수를 C나 C++로 구현하라.";
     return _desc;
   }
 

@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
 
+const std::string NewLine = "\r\n";
+
 class ICodingInterview
 {
 public:
