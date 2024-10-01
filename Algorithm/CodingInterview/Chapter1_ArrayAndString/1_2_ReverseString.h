@@ -31,6 +31,39 @@ public:
      _output[_strlen] = '\0';
 
      std::cout << "InputStr : " << _input << ", Result: " << _output << std::endl;
+
+     delete _output;
+  }
+
+  virtual void FixAnswer() override
+  {
+      const char* input = "abcdefghijklmn";
+  
+      // Find End index
+      int str_len = 0;
+      while (input[str_len] != '\0')
+      {
+          str_len++;
+      }
+
+      char* result = new char[str_len + 1];
+      strcpy_s(result, str_len +1, input);
+      char* reverse = result;
+
+      // Swap
+      for (int i = 0; i < str_len; ++i)
+      {
+          int _matching_idx = str_len - 1 - i;
+          if (i >= _matching_idx)
+              break;
+
+		  char temp = input[i];
+          result[i] = reverse[_matching_idx];
+		  reverse[_matching_idx] = temp;
+      }
+
+      std::cout << "InputStr : " << input << ", Result: " << result << std::endl;
+      delete result;
   }
 
   virtual std::string Explanation() override
