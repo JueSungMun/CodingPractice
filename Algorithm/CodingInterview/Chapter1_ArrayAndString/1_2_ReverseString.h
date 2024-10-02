@@ -32,7 +32,7 @@ public:
 
      std::cout << "InputStr : " << _input << ", Result: " << _output << std::endl;
 
-     delete _output;
+     delete[] _output;
   }
 
   virtual void FixAnswer() override
@@ -47,7 +47,11 @@ public:
       }
 
       char* result = new char[str_len + 1];
+#if defined(_MSV_VER)
       strcpy_s(result, str_len +1, input);
+#else
+      strcpy(result, input);
+#endif
       char* reverse = result;
 
       // Swap
@@ -63,7 +67,7 @@ public:
       }
 
       std::cout << "InputStr : " << input << ", Result: " << result << std::endl;
-      delete result;
+      delete[] result;
   }
 
   virtual std::string Explanation() override

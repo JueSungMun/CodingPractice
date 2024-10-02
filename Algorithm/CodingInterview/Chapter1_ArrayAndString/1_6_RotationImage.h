@@ -29,5 +29,7 @@ public:
 
 	virtual std::string Explanation( ) override
 	{
+		std::string _explanation;
+		return _explanation;
 	}
 };
