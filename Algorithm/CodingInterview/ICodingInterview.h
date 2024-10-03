@@ -21,6 +21,7 @@ public:
     std::cout << "Problems : " << std::endl;
     std::cout << Problem() << std::endl;
     Answer();
+    std::cout << "--------------------------------" << std::endl;
     FixAnswer();
     std::cout << "--------------------------------" << std::endl;
     std::cout << "Explanation : " << std::endl;

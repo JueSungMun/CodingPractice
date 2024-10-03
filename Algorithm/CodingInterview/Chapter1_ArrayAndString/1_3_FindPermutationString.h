@@ -63,6 +63,9 @@ public:
 			 }
 
 			 std::cout << GetBooleanStr(_result) << ", 문자열 비교 : " << _input1 << ", " << _input2 << std::endl;
+
+			 delete[] _sort_str1;
+			 delete[] _sort_str2;
 		}
 	}
 
@@ -99,6 +102,8 @@ public:
 			 std::cout << "문자열 갯수를 센 후, 다음 문자열에서 그만큼 갯수 빼기" << std::endl;
 			 std::cout << "문자열 타입 체크 필요 (ex 영문자, 유니코드)" << std::endl;
 			 std::cout << GetBooleanStr(_result) << ", 문자열 비교 : " << _input1 << ", " << _input2 << std::endl;
+
+			 delete[] _str_counter;
 		}
 	}
 

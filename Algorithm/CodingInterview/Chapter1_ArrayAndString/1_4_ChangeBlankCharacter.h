@@ -21,16 +21,71 @@ public:
 
 	virtual void Answer( ) override
 	{
+		 const char* _input = "Mr John Smith.";
+		 char* _output = new char[strlen(_input) * 3 + 1];
 
+		 int _last_idx = 0;
+		 for (int i = 0; i < static_cast<int>(strlen(_input)); ++i)
+		 {
+				 if (_input[i] != ' ')
+				 {
+					  _output[_last_idx++] = _input[i];
+				 }
+			   else 
+				 {
+					  _output[_last_idx++] = '%';
+					  _output[_last_idx++] = '2';
+					  _output[_last_idx++] = '0';
+				 }
+		 }
+		 _output[_last_idx] = '\0';
+		 std::cout<< _input << ", " << _output << std::endl;
+
+		 delete[] _output;
 	}
 
 	virtual void FixAnswer( ) override
 	{
+		 const char* _input = "Mr John Smith.";
+
+		 int _space_cnt = 0;
+		 for (int i = 0; i < static_cast<int>(strlen(_input)); ++i)
+		 {
+			  if (_input[i] == ' ')
+					_space_cnt++;
+		 }
+
+		 int _output_len = strlen(_input) + _space_cnt * 2; // strlen에 끝문자 포함된 길이
+		 char* _output = new char[_output_len];
+		 memset(_output, ' ', _output_len);
+     _output[_output_len--] = '\0'; // 먼저 끝문자 설정
+		
+		 for (int i = static_cast<int>(strlen(_input)) -1; i >= 0; i--)
+		 {
+				 if (_input[i] != ' ')
+				 {
+						_output[_output_len--] = _input[i];
+				 }
+				 else 
+				 {
+					  _output[_output_len--] = '2';
+					  _output[_output_len--] = '0';
+						_output[_output_len--] = '%';
+				 }
+
+			   // 왜 중간 출력 결과가 잘 안나오지!? 메모리 초기화가 안되서!? <-- memset이후 출력됨
+			   std::cout<< _input[i] << ", " << _output_len << ", " << _output << std::endl;
+		 }
+
+		 std::cout<< _input << ", " << _output << std::endl;
+		 delete[] _output;
 	}
 
 	virtual std::string Explanation( ) override
 	{
 		std::string _explanation;
+		_explanation += "문자열 편집시에는 뒤에서 하는 편" + NewLine;
+		_explanation += "공간에 여유가 있고, 어떤 문자를 덮어쓰는지 신경안써도 됨" + NewLine;
 		return _explanation;
 	}
 };
