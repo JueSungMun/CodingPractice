@@ -12,6 +12,6 @@
 
 void ArrayAndString::DoTest()
 {
-   auto _test = std::make_shared<ReverseString>();
+   auto _test = std::make_shared<FindPermutationString>();
    _test->Print();
 }

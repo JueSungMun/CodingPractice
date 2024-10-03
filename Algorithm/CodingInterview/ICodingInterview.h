@@ -27,6 +27,11 @@ public:
     std::cout << Explanation() << std::endl;
   }
 
+  std::string GetBooleanStr(bool _value)
+  {
+    return _value ? "true" : "false";
+  }
+
 protected:
   std::string m_Title;
 };
