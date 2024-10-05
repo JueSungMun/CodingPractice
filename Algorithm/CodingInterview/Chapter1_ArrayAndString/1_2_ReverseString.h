@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 #include "../ICodingInterview.h"
 #include <cstring>
 
@@ -47,7 +47,7 @@ public:
       }
 
       char* result = new char[str_len + 1];
-#if defined(_MSV_VER)
+#if defined(_MSC_VER)
       strcpy_s(result, str_len +1, input);
 #else
       strcpy(result, input);

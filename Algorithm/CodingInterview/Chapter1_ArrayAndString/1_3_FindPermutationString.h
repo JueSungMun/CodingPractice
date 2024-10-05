@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 #include "../ICodingInterview.h"
 #include <cstring>
 
@@ -19,7 +19,7 @@ public:
   {
 		int _str_len = static_cast<int>(strlen(str));
 		char* _sort_str = new char[_str_len];
-		strcpy(_sort_str, str);
+		StringCopy(str, _sort_str);
 
 		for (int i = 0 ; i < _str_len -1 ; ++i)
 		{
@@ -110,8 +110,8 @@ public:
 	virtual std::string Explanation() override
 	{
 		std::string _explanation;
-		_explanation += "고민해볼점!" + NewLine;
-		_explanation += "대소문자 구분 여부, 공백 문자 처리 관련" + NewLine;
+		_explanation += "고민해볼점! \r\n";
+		_explanation += "대소문자 구분 여부, 공백 문자 처리 관련 \r\n";
 		return _explanation;
 	}
 };

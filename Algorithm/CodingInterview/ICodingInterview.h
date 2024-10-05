@@ -33,6 +33,14 @@ public:
     return _value ? "true" : "false";
   }
 
+  void StringCopy(const char* Src, char* Dst)
+  {
+#if defined(_MSC_VER)
+      strcpy_s(Dst, strlen(Dst), Src);
+#else
+      strcpy(Dst, Src);
+#endif
+  }
 protected:
   std::string m_Title;
 };

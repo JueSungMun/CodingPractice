@@ -11,16 +11,17 @@ public:
 	virtual std::string Problem( ) override
 	{
 		std::string _desc;
-		_desc += "주어진 문자열 내의 모든 공백을 %20으로 바꾸는 메소드를 작성하라" + NewLine;
-		_desc += "문자열 끝에 추가로 필요한 문자들을 더할 수 있는 충분한 공간이 있다고 가정" + NewLine;
-		_desc += "공백을 포함하는 문자열의 길이도 주어진다고 가정" + NewLine;
-		_desc += "ex) 입력 : Mr John Smith      , 13" + NewLine;
+		_desc += "주어진 문자열 내의 모든 공백을 %20으로 바꾸는 메소드를 작성하라 \r\n";
+		_desc += "문자열 끝에 추가로 필요한 문자들을 더할 수 있는 충분한 공간이 있다고 가정\r\n";
+		_desc += "공백을 포함하는 문자열의 길이도 주어진다고 가정\r\n";
+		_desc += "ex) 입력 : Mr John Smith      , 13\r\n";
 		_desc += "     출력 : Mr%20John%20Smith";
 		return _desc;
 	}
 
 	virtual void Answer( ) override
 	{
+	
 		 const char* _input = "Mr John Smith.";
 		 char* _output = new char[strlen(_input) * 3 + 1];
 
@@ -58,7 +59,7 @@ public:
 		 int _output_len = strlen(_input) + _space_cnt * 2; // strlen에 끝문자 포함된 길이
 		 char* _output = new char[_output_len];
 		 memset(_output, ' ', _output_len);
-     _output[_output_len--] = '\0'; // 먼저 끝문자 설정
+		 _output[_output_len--] = '\0'; // 먼저 끝문자 설정
 		
 		 for (int i = static_cast<int>(strlen(_input)) -1; i >= 0; i--)
 		 {
@@ -70,7 +71,7 @@ public:
 				 {
 					  _output[_output_len--] = '2';
 					  _output[_output_len--] = '0';
-						_output[_output_len--] = '%';
+					  _output[_output_len--] = '%';
 				 }
 
 			   // 왜 중간 출력 결과가 잘 안나오지!? 메모리 초기화가 안되서!? <-- memset이후 출력됨
@@ -78,14 +79,14 @@ public:
 		 }
 
 		 std::cout<< _input << ", " << _output << std::endl;
-		 delete[] _output;
+		 //delete[] _output;
 	}
 
 	virtual std::string Explanation( ) override
 	{
 		std::string _explanation;
-		_explanation += "문자열 편집시에는 뒤에서 하는 편" + NewLine;
-		_explanation += "공간에 여유가 있고, 어떤 문자를 덮어쓰는지 신경안써도 됨" + NewLine;
+		_explanation += "문자열 편집시에는 뒤에서 하는 편 \r\n";
+		_explanation += "공간에 여유가 있고, 어떤 문자를 덮어쓰는지 신경안써도 됨 \r\n";
 		return _explanation;
 	}
 };
