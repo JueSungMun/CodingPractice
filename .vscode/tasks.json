@@ -1,39 +1,106 @@
 {
-	"version": "2.0.0",
-	"tasks": [
-		{
-			"type": "cppbuild",
-			"label": "C/C++: cl.exe build active file",
-			"command": "cl.exe",
-			"args": [
-				"/Zi",
-				"/EHsc",
-				"/Fo:${workspaceFolder}\\Bin\\x64\\${fileBasenameNoExtension}.obj", // 중간 파일 경로 설정
-				"/Fd:${workspaceFolder}\\Bin\\x64\\${fileBasenameNoExtension}.pdb", // 중간 파일 경로 설정
-				"/Fe:${workspaceFolder}\\Bin\\x64\\${fileBasenameNoExtension}.exe", // 중간 파일 경로 설정
-				"${workspaceFolder}\\main.cpp",
-				"${workspaceFolder}\\Algorithm\\CodingInterview\\*.cpp",
-				"/I",
-				"C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.43.34808/include",
-				"/I",
-				"C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/ucrt",
-				"/I",
-				"${workspaceFolder}\\UE4-Math",
-				"/I",
-				"${workspaceFolder}\\Algorithm",
-				"/link",
-				"/LIBPATH:C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.43.34808/lib/x64",
-				"/LIBPATH:C:/Program Files (x86)/Windows Kits/10/Lib/10.0.22621.0/um/x64",
-				"/LIBPATH:C:/Program Files (x86)/Windows Kits/10/Lib/10.0.22621.0/ucrt/x64",
-			],
-			"options": {
-				"cwd": "${fileDirname}"
-			},
-			"problemMatcher": [
-				"$msCompile"
-			],
-			"group": "build",
-			"detail": "compiler: cl.exe"
-		}
-	]
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Make tmp directory",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-Command",
+                "if (-Not (Test-Path Debug)) { New-Item -ItemType Directory -Path Debug }"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: cl.exe build active file",
+            "command": "cl.exe",
+            "args": [
+                "/Zi",
+                "/EHsc",
+                "/std:c++17",
+                "/nologo",
+                "/Fe:",
+                "${workspaceFolder}\\Bin\\main.exe",
+                "${workspaceFolder}\\UE4-Math\\Math\\*.cpp",
+                "${workspaceFolder}\\Algorithm\\CodingInterview\\*.cpp",
+                "${workspaceFolder}\\main.cpp",
+                "/Fo:${workspaceFolder}\\Debug\\",
+                "/Fd:${workspaceFolder}\\Debug\\",
+                "/I",
+                "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.43.34808/include",
+                "/I",
+                "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.43.34808/atlmfc/include",
+                "/I",
+                "C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/ucrt",
+                "/I",
+                "C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/um",
+                "/I",
+                "C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared",
+                "/I",
+                "${workspaceFolder}\\Algorithm",
+                "/I",
+                "${workspaceFolder}\\UE4-Math",
+                "/link",
+                "/LIBPATH:C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.43.34808/lib/onecore/x64",
+                "/LIBPATH:C:/Program Files (x86)/Windows Kits/10/Lib/10.0.22621.0/um/x64",
+                "/LIBPATH:C:/Program Files (x86)/Windows Kits/10/Lib/10.0.22621.0/ucrt/x64",
+                "/DEBUG"
+            ],
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn": "Make tmp directory",
+            "detail": "컴파일러: cl.exe"
+        },
+        {
+            "type": "shell",
+            "label": "C/C++: g++.exe build active file",
+            "command": "g++",
+            "args": [
+                "-g",
+                "-std=c++17",
+                "-pthread",
+                
+                // 출력파일
+                "-o",
+                "${workspaceFolder}\\Bin\\main.exe",
+
+                // 컴파일 대상 소스들
+                "${workspaceFolder}\\UE4-Math\\Math\\*.cpp",
+                "${workspaceFolder}\\UE4-Math\\Src\\*.cpp",
+                "${workspaceFolder}\\UE4-Math\\main.cpp",
+
+                // Include 경로
+                /*"-IC:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.41.34120/include",
+                "-IC:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.41.34120/atlmfc/include",
+                "-IC:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/ucrt",
+                "-IC:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/um",
+                "-IC:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared",*/
+                "-I${workspaceFolder}\\UE4-Math\\Src",
+                "-I${workspaceFolder}\\UE4-Math",
+                "-L",
+                "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.43.34808/lib/onecore/x64",
+                "-L",
+                "C:/Program Files (x86)/Windows Kits/10/Lib/10.0.22621.0/um/x64",
+                "-L",
+                "C:/Program Files (x86)/Windows Kits/10/Lib/10.0.22621.0/ucrt/x64",
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+
+    ]
 }
